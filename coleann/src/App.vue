@@ -1,6 +1,25 @@
 <template>
 <div class="home">
-  <section class="hero is-dark">
+
+<b-navbar toogleable="lg" type="dark" variant="info">
+  <b-navbar-brand href="#">Navbar</b-navbar-brand>
+  <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+  <b-collapse id="nav-collapse">
+    <b-navbar-nav>
+      <b-nav-item href="#">Link</b-nav-item>
+      <b-nav-item href="#">Disable</b-nav-item>
+    </b-navbar-nav>
+
+    <b-navbar-nav>
+      <b-nav-form>
+        <b-form-input></b-form-input>
+        <b-button>Search</b-button>
+      </b-nav-form>
+    </b-navbar-nav>
+  </b-collapse>
+</b-navbar>
+
+  <!-- <section class="hero is-dark">
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -14,7 +33,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </div>
 </template>
 <script>
