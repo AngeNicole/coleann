@@ -1,7 +1,7 @@
 <template>
 <div>
     <Nav :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
-      <img class="img" src="logo" alt="" srcset="" /> <!-- A slot For your project Logo -->
+      <img class="img" src="" alt="" srcset="" /> 
     </Nav>
   </div>
 </template>
