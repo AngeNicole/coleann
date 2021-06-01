@@ -80,7 +80,91 @@
 //   }
 // });
 
-
+export default {
+        ...
+        data () {
+            return {
+                navbarData: {
+                    elementId: 'main-navbar',
+                    isUsingVueRouter: true,
+                    mobileBreakpoint: 992,
+                    brandImagePath: '/',
+                    brandImage: require('../src/assets/images/lockup-color.png'),
+                    brandImageAltText: 'vue-navigation-bar',
+                    collapseButtonStyle: 'dark',
+                    ariaLabelMainNav: 'Main Navigation',
+                    menuOptionsLeft: [
+                        {
+                            type: 'link',
+                            text: 'Why Dunder Mifflin',
+                            path: '/why',
+                            subMenuOptions: [
+                                {
+                                    type: 'link',
+                                    text: 'About',
+                                    path: '#',
+                                },
+                                {
+                                    type: 'hr',
+                                },
+                                {
+                                    type: 'link',
+                                    text: 'Locations',
+                                    path: '/locations',
+                                },
+                                {
+                                    type: 'link',
+                                    text: 'Blog',
+                                    path: '/blog',
+                                },
+                            ]
+                        },
+                        {
+                            type: 'link',
+                            text: 'Contact',
+                            path: '/contact',
+                            subMenuOptions: [
+                                {
+                                    type: 'link',
+                                    text: 'Customer Service',
+                                    path: '/customer-service',
+                                },
+                                {
+                                    type: 'link',
+                                    text: 'Accounting',
+                                    path: '/accounting',
+                                },
+                                {
+                                    type: 'link',
+                                    text: 'Reception',
+                                    path: '/reception',
+                                },
+                            ]
+                        },
+                        {
+                            type: 'link',
+                            text: 'Pricing',
+                            path: '/pricing',
+                        },
+                    ],
+                    menuOptionsRight: [
+                        {
+                            type: 'button',
+                            text: 'Signup',
+                            path: '/signup',
+                            class: 'button-red'
+                        },
+                        {
+                            type: 'button',
+                            text: 'Login',
+                            path: '/login',
+                        }
+                    ]
+                }
+            }
+        }
+        ...
+    }
 
 </script>
 <style lang="scss" scoped>
