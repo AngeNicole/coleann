@@ -1,25 +1,34 @@
   <template>
   <div id="app">
     <div class="center example-nav">
-      <vs-navbar not-line center-collapsed v-model="active" color="blue">
+      <input class="input-color" v-model="colorx" type="color" name="" id="">
+      
+      <vs-navbar not-line center-collapsed v-model="active" class="navbar"  :color="colorx"
+      text-color="rgba(255,255,255,.6)"
+      active-text-color="rgba(255,255,255,1)">
+        <div slot="title">
+          <vs-navbar-title>
+            Navbar Color
+          </vs-navbar-title>
+        </div>
         <template #left>
           <img src="assets/c4.jpg" alt="">
         </template>
         <vs-navbar-item :active="active == 'guide'" id="guide">
-          Guide
+          Shop
         </vs-navbar-item>
         <vs-navbar-item :active="active == 'docs'" id="docs">
-          Documents
+          About
         </vs-navbar-item>
         <vs-navbar-item :active="active == 'components'" id="components">
-          Components
+          Blogs
         </vs-navbar-item>
         <vs-navbar-item :active="active == 'license'" id="license">
-          license
+          FAQs
         </vs-navbar-item>
         <template #right>
-          <vs-button flat >Login</vs-button>
-          <vs-button>Get Started</vs-button>
+          <vs-button flat >Register</vs-button>
+          <vs-button>Login</vs-button>
         </template>
       </vs-navbar>
       
@@ -30,12 +39,18 @@
  <script>
   export default {
     data:() => ({
-      active: 'guide'
+      active: 0,
+
+      colorx:'#BFCBE3'
     })
   }
   </script>
-<style>
- #guide{
-   color: red;
- }
+<style lang="stylus">
+ .input-color
+  position relative
+  display inline-block
+ .navbar
+  height 50px
+  font 20px
+  
 </style>
